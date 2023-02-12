@@ -1,6 +1,6 @@
 name: "Exercicio2"
 
-on: push
+on: [push]
   
 jobs:
   cria_e_upload_artefato:
