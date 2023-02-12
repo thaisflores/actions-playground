@@ -1,0 +1,42 @@
+name: "Exercicio 1"
+
+on:
+  push:
+  
+jobs:
+  print_date_ubuntu:
+    name: Print Date Ubuntu!
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Print Date Ubuntu!
+        run: date
+        
+  print_date_windows:
+    name: Print Date Windows!
+    runs-on: windows-latest
+    
+    steps:
+      - name: Print Date Windows!
+        run: date
+        
+  print_date_macos:
+    name: Print Date MacOS!
+    runs-on: macos-latest
+    
+    steps:
+      - name: Print Date MacOS!
+        run: date
+        
+  print_date_final:
+    name: Print Date Final!
+    runs-on: ubuntu-latest
+    
+    needs:
+    - print_date_ubuntu
+    - print_date_windows
+    - print_date_macos
+    
+    steps:
+      - name: Print Date Final
+        run: date
