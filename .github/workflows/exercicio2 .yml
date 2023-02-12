@@ -4,7 +4,7 @@ on: push
   
 jobs:
   cria_e_upload_artefato:
-    name: cria artefato e faz upload
+    name: "cria artefato e faz upload"
     runs-on: ubuntu-latest
     
     steps:
