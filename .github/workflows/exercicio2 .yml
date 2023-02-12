@@ -1,0 +1,19 @@
+name: "Exercicio 2"
+
+on: push
+  
+jobs:
+  cria_e_upload_artefato:
+    name: cria artefato e faz upload
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3.3.0
+       
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v3.1.2
+        with:
+          name: ${{ vars.NOME_ARQUIVO_UPLOAD }}
+          path: . 
+          retention-days: 15
